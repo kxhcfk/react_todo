@@ -1,0 +1,44 @@
+@import "../../styles/mixins";
+@import "../../styles/vars";
+
+.root {
+	display: flex;
+	align-items: center;
+	margin-bottom: 3rem;
+	margin-left: -0.8rem;
+	margin-right: -0.8rem;
+	padding: .8rem;
+	background-color: transparent;
+	border-radius: 1.6rem;
+	cursor: pointer;
+	
+	transition: background-color .3s;
+	
+	@include down($xl) {
+		margin-bottom: 0;
+	}
+	
+	&:hover {
+		background-color: var(--active-tag);
+	}
+	
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.color {
+	border-radius: 50%;
+	width: 3.8rem;
+	height: 3.8rem;
+	margin-right: 1.2rem;
+}
+
+.title {
+	font-size: 1.6rem;
+	color: var(--color-black);
+}
+
+.active {
+	background-color: var(--active-tag);
+}

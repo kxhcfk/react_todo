@@ -1,0 +1,42 @@
+@import "../../styles/mixins";
+@import "../../styles/vars";
+
+.root {
+	position: relative;
+	overflow: hidden;
+}
+
+.input {
+	padding: 2.4rem 3.2rem;
+	border-radius: 1.2rem;
+	background-color: var(--color-lightgrey);
+	font-size: 2.4rem;
+	color: var(--color-black);
+	
+	@include down($md) {
+		font-size: 1.6rem;
+	}
+}
+
+.input:not(:placeholder-shown) ~ .placeholder,
+.input:focus ~ .placeholder {
+	opacity: 0;
+	top: 50%;
+	transition: top .3s, opacity .3s;
+}
+
+.placeholder {
+	font-size: 2.4rem;
+	color: var(--color-black);
+	position: absolute;
+	pointer-events: none;
+	display: block;
+	padding: 2.4rem 3.2rem;
+	left: 0;
+	top: 0;
+	transition: opacity .3s;
+	
+	@include down($md) {
+		font-size: 1.6rem;
+	}
+}

@@ -1,0 +1,19 @@
+@import "../../styles/mixins";
+@import "../../styles/vars";
+
+.root {
+	margin-bottom: 5.6rem;
+	
+	@include down($xl) {
+		display: flex;
+		align-items: center;
+		gap: 2.4rem;
+		overflow-x: auto;
+		margin: 0 -1.6rem 3.2rem;
+		padding: 0 1.6rem;
+		
+		&::-webkit-scrollbar-track {
+			margin: 0 1.6rem;
+		}
+	}
+}

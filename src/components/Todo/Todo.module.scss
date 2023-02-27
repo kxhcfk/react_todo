@@ -1,0 +1,55 @@
+@import "../../styles/mixins";
+@import "../../styles/vars";
+
+.root {
+	margin: 6.5rem 0;
+}
+
+.container {
+	max-width: calc(152.5rem + 1.6rem * 2);
+	padding: 0 1.6rem;
+	margin: 0 auto;
+}
+
+.content {
+	padding: 6.5rem 0;
+	
+	@include down($xl) {
+		padding: 0;
+	}
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 8rem;
+	
+	@include down($xl) {
+		margin-bottom: 5.6rem;
+	}
+}
+
+.title {
+	font-size: 3.2rem;
+	color: var(--color-black);
+}
+
+.body {
+	display: flex;
+	
+	@include down($xl) {
+		display: block;
+	}
+}
+
+.add {
+	display: flex;
+	width: 3.4rem;
+	height: 3.4rem;
+	
+	svg {
+		width: 100%;
+		height: 100%;
+	}
+}

@@ -1,0 +1,71 @@
+:root {
+	--color-black: #69665C;
+	--color-white: #FFFFFF;
+	--color-gray: #B2AFA1;
+	--color-yellow: #FFF9DE;
+	--color-blue: #D1E5F7;
+	--color-green: #DAF2D6;
+	--color-pink: #FFCECE;
+	--color-purple: #D2CEFF;
+	--active-tag: #FAF9F8;
+	--color-lightgrey: #F9F9F8;
+}
+
+:root {
+	font-family: "Adobe Clean", sans-serif;
+	font-size: 62.5%;
+}
+
+:root {
+	font-size: 10px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+a {
+	display: inline-block;
+}
+
+button,
+label {
+	cursor: pointer;
+}
+
+button {
+	display: inline-block;
+}
+
+input,
+textarea {
+	display: block;
+	width: 100%;
+}
+
+svg {
+	display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+}
+
+:focus-visible {
+	outline: lightblue solid .2rem;
+	outline-offset: -.2rem;
+}
+
+::-webkit-scrollbar {
+	width: .4rem;
+	height: .4rem;
+}
+
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--color-black);
+	border-radius: 99.9rem;
+}

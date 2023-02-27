@@ -1,0 +1,19 @@
+@import "../../styles/vars";
+@import "../../styles/mixins";
+
+.root {
+	flex-grow: 1;
+	overflow: hidden;
+}
+
+.wrapper {
+	margin-right: 3.6rem;
+	
+	@include down(1199px) {
+		margin-right: 2.4rem;
+	}
+	
+	@include down(899px) {
+		margin-right: -2.4rem;
+	}
+}

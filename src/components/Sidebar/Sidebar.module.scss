@@ -1,0 +1,22 @@
+@import "../../styles/mixins";
+@import "../../styles/vars";
+
+.root {
+	flex-basis: 25rem;
+	flex-shrink: 0;
+	margin-right: 3rem;
+	
+	@include down($xl) {
+		margin-right: 0;
+		margin-bottom: 4rem;
+	}
+}
+
+.wrapper {
+	position: sticky;
+	top: 1.6rem;
+	
+	@include down($xl) {
+		top: 0;
+	}
+}

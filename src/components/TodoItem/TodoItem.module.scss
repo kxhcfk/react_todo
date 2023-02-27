@@ -1,0 +1,148 @@
+.root {
+	padding: 3rem;
+	background-color: var(--color-yellow);
+	border-radius: .8rem;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 3.8rem;
+	position: relative;
+	gap: 1rem;
+}
+
+.title {
+	font-size: 2rem;
+	color: var(--color-black);
+	
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+}
+
+.more {
+	display: flex;
+	align-items: center;
+	position: relative;
+	
+	&:hover {
+		span {
+			--color-gray: var(--color-black);
+		}
+	}
+	
+	&::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		padding-top: 100%;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+	
+	span {
+		display: inline-block;
+		border-radius: 50%;
+		width: .8rem;
+		height: .8rem;
+		background-color: var(--color-gray);
+		margin-right: .2rem;
+		transition: background-color .3s;
+		
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.moreContent {
+	position: absolute;
+	z-index: 1;
+	right: 0;
+	top: 100%;
+	min-width: 22.2rem;
+	width: max-content;
+	opacity: 0;
+	pointer-events: none;
+	
+	transition: opacity .3s;
+	
+	li {
+		color: var(--color-gray);
+		font-size: 1.6rem;
+		border-bottom: .2rem solid var(--color-lightgrey);
+		
+		button {
+			width: 100%;
+			background-color: var(--color-white);
+			padding: 2.8rem 3rem;
+		}
+		
+		&:last-child {
+			border-bottom: 0;
+		}
+		
+		&:first-child button {
+			border-top-left-radius: 1.6rem;
+			border-top-right-radius: 1.6rem;
+		}
+		
+		&:last-child button {
+			border-bottom-left-radius: 1.6rem;
+			border-bottom-right-radius: 1.6rem;
+		}
+	}
+}
+
+.moreContent.active {
+	opacity: 1;
+	pointer-events: all;
+}
+
+.description {
+	margin-bottom: 3.2rem;
+	font-size: 1.8rem;
+	letter-spacing: .03rem;
+	line-height: 1.8;
+	
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
+}
+
+.footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.list {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+	li {
+		width: 3.8rem;
+		height: 3.8rem;
+		border-radius: 50%;
+		margin-right: 1.2rem;
+		
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.done {
+	.title,
+	.description {
+		text-decoration: line-through;
+	}
+}

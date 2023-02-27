@@ -1,0 +1,82 @@
+@import "../../styles/mixins";
+@import "../../styles/vars";
+
+.root {
+
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 6rem;
+}
+
+.cancel {
+	padding: 0;
+	background: transparent;
+	color: var(--color-black);
+}
+
+.item {
+	margin-bottom: 6rem;
+	
+	@include down($md) {
+		margin-bottom: 4rem;
+	}
+	
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.item__title {
+	display: block;
+	font-weight: 700;
+	font-size: 2.6rem;
+	margin-bottom: 2.2rem;
+	color: var(--color-black);
+	
+	@include down($md) {
+		font-size: 2rem;
+	}
+}
+
+.tags {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 2.4rem;
+	margin-left: -.8rem;
+	margin-right: -.8rem;
+}
+
+.tag {
+	display: flex;
+	align-items: center;
+	gap: 1.2rem;
+	padding: .8rem;
+	background-color: transparent;
+	border-radius: 1.6rem;
+	cursor: pointer;
+	transition: background-color .3s;
+	
+	&:hover {
+		background-color: var(--active-tag);
+	}
+}
+
+.tag__color {
+	border-radius: 50%;
+	width: 3.8rem;
+	height: 3.8rem;
+}
+
+.tag__title {
+	font-size: 1.6rem;
+	color: var(--color-black);
+}
+
+.tag__active {
+	background-color: var(--active-tag);
+}

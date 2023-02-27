@@ -1,0 +1,25 @@
+$basePath: "./assets/fonts/";
+
+@font-face {
+	font-family: "Adobe Clean";
+	src: local("Adobe Clean"),
+	url($basePath + "AdobeClean/Regular.woff") format("woff"),
+	url($basePath + "AdobeClean/Regular.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+	font-variant: normal;
+	font-display: block;
+}
+
+@font-face {
+	font-family: "Adobe Clean";
+	src: local("Adobe Clean"),
+	url($basePath + "AdobeClean/Bold.woff") format("woff"),
+	url($basePath + "AdobeClean/Bold.woff2") format("woff2");
+	font-weight: 700;
+	font-style: normal;
+	font-stretch: normal;
+	font-variant: normal;
+	font-display: block;
+}
